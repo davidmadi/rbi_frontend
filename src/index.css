@@ -1,0 +1,73 @@
+#root {
+  height: 700px;
+}
+
+.btn{
+  border-radius: 30px !important;
+}
+
+.home{
+  /* The image used */
+
+  /* Full height */
+  /*min-height: 500px;*/
+
+  /* Center and scale the image nicely */
+  background-image: url("/images/93b1b10bd8b906c4c8a5fd9367b875bd12f95379.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a{
+  color: #88472e;
+}
+.top-section .card-section{
+  min-width:180px;
+  border:none;
+  background-color:#f3f3e7;
+  height:150px;
+}
+.top-section .card-section.selected {
+  background-color: orange;
+}
+.top-section .card-body a {
+  color:#88472e;
+}
+.top-section{
+  overflow: scroll;
+}
+.top-section .section-image{
+  max-width: 130px;
+}
+.middle-section .card-section{
+  min-width: 30%;
+  border:none;
+}
+.middle-section .section-image{
+  width: 100%;
+  border-radius: 10px;
+}
+.bktopleft{
+  width: 95px;
+}
+.card-body{
+  text-align: center;
+}
+.card-title{
+  color:#88472e;
+}
+.section-items .card.card-section .card-body,
+.menu-items .card.card-section .card-body {
+  border-radius: 10px;
+  margin: 30px;
+  padding: 0px;
+  box-shadow: 0px 0px 30px 0px grey;  
+}
+.section-items .image-container,
+.menu-items .image-container{
+  height: 200px;
+  overflow: hidden;
+}
+.card-go-ico{
+  color: #88472e;
+}
