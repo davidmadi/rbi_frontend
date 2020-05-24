@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import {Image} from 'react-bootstrap';
 import { matchPath } from "react-router";
 import TopMenu from '../../components/topMenu';
-import { IoIosArrowDropright } from 'react-icons/io';
+import BottomSection from '../../components/bottomSection';
+import { IoIosArrowDroprightCircle } from 'react-icons/io';
 
 
 class Menu extends Component {
@@ -41,7 +42,7 @@ class Menu extends Component {
                             <Image className="section-image" src={"/images/" + m.image.asset._ref}/>
                           </div>
                           <h6 className="card-title">{m.name.en}</h6>
-                          <IoIosArrowDropright className="card-go-ico" size="3em" />
+                          <IoIosArrowDroprightCircle className="card-go-ico" size="3em" />
                         </Link>
                       </div>
                     </div>
@@ -50,6 +51,7 @@ class Menu extends Component {
               })}
           </div>
         </div>
+        <BottomSection/>
       </div>
     );
   }

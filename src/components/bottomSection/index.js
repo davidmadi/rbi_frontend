@@ -1,60 +1,40 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { loadSections, loadMenu } from '../../actions';
-import {Image} from 'react-bootstrap';
-import { matchPath } from "react-router";
+import { IoMdArrowDropright } from 'react-icons/io';
+//import {Image} from 'react-bootstrap';
 
 class BottomSection extends Component {
   constructor(){
     super();
-    this.state = {section_id:'root'};
-  }
-
-  componentWillMount(){
-    const match = matchPath(window.location.pathname, {
-      path: "/menu/section/:id",
-      exact: true,
-      strict: false
-    });
-    if(match)
-      this.setState({section_id:match.params.id});
-  }
-
-  componentDidMount(){
-    if (!this.props.sections.length){
-      loadSections(this.props.dispatch);
-      loadMenu(this.props.dispatch);
-    }
   }
 
   render()
   {
-    var isRootClass = (this.state.section_id == "root") ? " selected" : "";
-
     return (
-      <div className="container">
-        <div className="d-flex flex-row top-section">
-            <div className={"card card-section"+isRootClass} key={"root"}>
-              <div className="card-body">
-                <Link to={"/menu/root"} onClick={()=>this.setState({section_id:"root"})}>
-                  <Image className="section-image" key={"root"} src={"/images/bk_logo.png"}/>
-                  <h6 className="card-title">Menu</h6>
-                </Link>
+      <div className="bottom-section">
+        <div className="container mb-5">
+          <div className="d-flex h-100 mt-5">
+            <div className="p-2 flex-fill">
+              <div className="">SEE TIPS & TRICKS</div>
+              <div className="bold">NEED HELP!</div>            
+            </div>
+            <div className="p-2 flex-fill opacity-5">
+              <div className="row text-right">
+                <div className="col-7"></div>
+                <div className="col-3"><span>TOTAL (0 ITEM):</span></div>
+                <div className="col-2"><span>$0.00</span></div>
+              </div>
+              <div className="row text-right mt-2">
+                <div className="col-7"></div>
+                <div className="col-5">
+                  <div className="btn btn-primary w-100 opacity-5">
+                    <span className="text-light">CHECKOUT</span>
+                    <IoMdArrowDropright className="card-go-ico text-light" size="3em" />
+                  </div>
+                </div>
               </div>
             </div>
-            {this.props.sections.map((m) => {
-              var selectedClass = m._id == this.state.section_id ? " selected" : "";
-              return (
-              <div className={"card card-section"+selectedClass} key={m._id}>
-                <div className="card-body">
-                  <Link to={"/menu/section/"+m._id} onClick={()=>this.setState({section_id:m._id})}>
-                    <Image className="section-image" key={m._id} src={"/images/" + m.carouselImage.asset._ref}/>
-                    <h6 className="card-title">{m.name.en}</h6>
-                  </Link>
-                </div>
-              </div>)
-            })}
+          </div>
         </div>
       </div>
     );

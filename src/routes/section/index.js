@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { selectSection  } from '../../actions';
 import { matchPath } from "react-router";
 import TopMenu from '../../components/topMenu';
+import BottomSection from '../../components/bottomSection';
 import {Image} from 'react-bootstrap';
 
 class Section extends Component {
@@ -53,6 +54,7 @@ class Section extends Component {
             ))}
           </div>
         </div>
+        <BottomSection/>
       </div>
     );
   }

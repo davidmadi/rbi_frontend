@@ -71,3 +71,11 @@ a{
 .card-go-ico{
   color: #88472e;
 }
+.bottom-section{
+  height: 220px;
+  background-color: #000000b0;
+  color: white;
+}
+.opacity-5{
+  opacity: 0.5;
+}
