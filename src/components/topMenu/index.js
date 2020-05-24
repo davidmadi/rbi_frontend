@@ -43,23 +43,25 @@ class TopMenu extends Component {
     return (
       <div className="d-flex flex-column topmenu">
         <div className="container d-flex flex-row top-section" ref="scrollDiv">
-            <div className={"card card-section"+isRootClass} key={"root"}>
+            <div className={"card card-section"} key={"root"}>
               <div className="card-body">
                 <Link to={"/menu/root"} onClick={()=>this.setState({section_id:"root"})}>
                   <Image className="section-image bktopleft" key={"root"} src={"/images/bk_logo.png"}/>
-                  <h6 className="card-title">Menu</h6>
+                  <h6 className={"card-title"+isRootClass}>Menu</h6>
                 </Link>
+                <div className={"line "+isRootClass}></div>
               </div>
             </div>
             {this.props.sections.map((m) => {
               var selectedClass = m._id == this.state.section_id ? " selected" : "";
               return (
-              <div className={"card card-section"+selectedClass} key={m._id}>
+              <div className={"card card-section"} key={m._id}>
                 <div className="card-body">
                   <Link to={"/menu/section/"+m._id} onClick={()=>this.setState({section_id:m._id})}>
                     <Image className="section-image" key={m._id} src={"/images/" + m.carouselImage.asset._ref}/>
-                    <h6 className="card-title">{m.name.en}</h6>
+                    <h6 className={"card-title"+selectedClass}>{m.name.en}</h6>
                   </Link>
+                  <div className={"line "+selectedClass}></div>
                 </div>
               </div>)
             })}
