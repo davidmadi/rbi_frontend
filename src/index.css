@@ -44,8 +44,14 @@ a{
   border:none;
 }
 .middle-section .section-image{
-  width: 100%;
   border-radius: 10px;
+  height: 20rem;
+  margin: auto;
+  position: absolute;
+  top: -999px;
+  bottom: -999px;
+  left: -999px;
+  right: -999px;
 }
 .bktopleft{
   width: 75px;
@@ -59,14 +65,16 @@ a{
 .section-items .card.card-section .card-body,
 .menu-items .card.card-section .card-body {
   border-radius: 10px;
-  margin: 30px;
+  margin: .7rem;
   padding: 0px;
   box-shadow: 0px 0px 30px 0px grey;  
 }
 .section-items .image-container,
 .menu-items .image-container{
-  height: 200px;
   overflow: hidden;
+  height: 14rem;
+  background-size: cover;
+  position:relative;
 }
 .card-go-ico{
   color: #88472e;

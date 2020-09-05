@@ -24,7 +24,7 @@ class Section extends Component {
       exact: true,
       strict: false
     });
-    if (match && match.params.id != this.state.sectionId)
+    if (match && match.params.id !== this.state.sectionId)
       selectSection(this.props.dispatch, match.params.id, this.props.sessions, this.props.items);      
   }
 
@@ -34,7 +34,7 @@ class Section extends Component {
   }
 
   render() {
-    const { name, sectionItems } = this.props;
+    const { sectionItems } = this.props;
     return (
       <div className="section-page d-flex flex-column h-100">
         <TopMenu/>

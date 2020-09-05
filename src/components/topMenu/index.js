@@ -30,7 +30,7 @@ class TopMenu extends Component {
 
   componentDidUpdate(){
     if(this.props.sections){
-      var idx = this.props.sections.findIndex(s => s._id == this.state.section_id);      
+      var idx = this.props.sections.findIndex(s => s._id === this.state.section_id);      
       if(idx > 4)
         this.refs.scrollDiv.scrollLeft = window.innerWidth;
     }
@@ -38,7 +38,7 @@ class TopMenu extends Component {
 
   render()
   {
-    var isRootClass = (this.state.section_id == "root") ? " selected" : "";
+    var isRootClass = (this.state.section_id === "root") ? " selected" : "";
 
     return (
       <div className="d-flex flex-column topmenu">
@@ -53,7 +53,7 @@ class TopMenu extends Component {
               </div>
             </div>
             {this.props.sections.map((m) => {
-              var selectedClass = m._id == this.state.section_id ? " selected" : "";
+              var selectedClass = m._id === this.state.section_id ? " selected" : "";
               return (
               <div className={"card card-section"} key={m._id}>
                 <div className="card-body">

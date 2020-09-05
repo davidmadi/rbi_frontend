@@ -1,10 +1,30 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { firstLoad } from '../../actions';
 
 class Home extends Component {
-  render()
-  {
+
+  componentDidMount(){
+    if(!this.props.mainLoaded)
+      firstLoad(this.props.dispatch);
+  }
+
+  unloadedHome = ()=>{
+    return (
+      <div className="d-flex flex-column justify-content-md-center h-100 home">
+        <div className="p-2 h-50"></div>
+        <div className="p-2">
+          <div className="d-flex justify-content-center">
+            <span type="button" className="btn btn-primary">LOADING...</span>
+          </div>
+        </div>
+      </div>
+    );
+    
+  }
+
+  loadedHome = ()=>{
     return (
       <div className="d-flex flex-column justify-content-md-center h-100 home">
         <div className="p-2 h-50"></div>
@@ -18,10 +38,18 @@ class Home extends Component {
       </div>
     );
   }
+
+  render(){
+    if(this.props.mainLoaded)
+      return this.loadedHome();
+    else
+      return this.unloadedHome();
+  }
+
 }
 
-const mapStateToProps = ({  }) => {
-	return {  };
+const mapStateToProps = ({ menuState }) => {
+	return { mainLoaded : menuState.mainLoaded };
 };
 
 export default connect(mapStateToProps)(Home);

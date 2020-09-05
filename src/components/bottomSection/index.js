@@ -4,9 +4,6 @@ import { IoMdArrowDropright } from 'react-icons/io';
 //import {Image} from 'react-bootstrap';
 
 class BottomSection extends Component {
-  constructor(){
-    super();
-  }
 
   render()
   {
