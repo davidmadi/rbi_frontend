@@ -88,7 +88,9 @@ export const firstLoad = (dispatch) =>{
     return new Promise((resolve, reject) =>{
         loadSections(dispatch).then(() => {
             loadMenu(dispatch).then(()=>{
-                resolve();
+                loadItems(dispatch).then(()=>{
+                    resolve();
+                })
             }).catch(()=>{
                 reject();
             });

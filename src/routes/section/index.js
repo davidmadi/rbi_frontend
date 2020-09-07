@@ -25,7 +25,7 @@ class Section extends Component {
       strict: false
     });
     if (match && match.params.id !== this.state.sectionId)
-      selectSection(this.props.dispatch, match.params.id, this.props.sessions, this.props.items);      
+      selectSection(this.props.dispatch, match.params.id, this.props.sections, this.props.items);      
   }
 
   componentDidUpdate(){
