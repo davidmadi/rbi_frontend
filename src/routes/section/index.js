@@ -38,10 +38,10 @@ class Section extends Component {
     return (
       <div className="section-page d-flex flex-column h-100">
         <TopMenu/>
-        <div className="container section-items">
+        <div className="section-items">
           <div className="row middle-section">
           {sectionItems.map(i =>(
-            <div className="col-4" key={i._id}>
+            <div className="col-4 no-pd" key={i._id}>
               <div className={"card card-section"}>
                 <div className="card-body">
                   <div className="image-container">

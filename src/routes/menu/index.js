@@ -30,7 +30,7 @@ class Menu extends Component {
     return (
       <div className="menu-page d-flex flex-column h-100">
         <TopMenu/>
-        <div className="container menu-items">
+        <div className="menu-items">
           <div className="row middle-section">
               {this.props.sections.map((m) => {
                 return (

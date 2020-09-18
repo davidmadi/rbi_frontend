@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { loadSections, loadMenu } from '../../actions';
+import { loadAll } from '../../actions';
 import {Image} from 'react-bootstrap';
 import { matchPath } from "react-router";
 
@@ -23,8 +23,7 @@ class TopMenu extends Component {
 
   componentDidMount(){
     if (!this.props.sections.length){
-      loadSections(this.props.dispatch, this.props.sections);
-      loadMenu(this.props.dispatch, this.props.menu);
+      loadAll(this.props.dispatch, this.props.sections, this.props.menus, this.props.items);
     }
   }
 
@@ -42,7 +41,7 @@ class TopMenu extends Component {
 
     return (
       <div className="d-flex flex-column topmenu">
-        <div className="container d-flex flex-row top-section" ref="scrollDiv">
+        <div className="d-flex flex-row top-section" ref="scrollDiv">
             <div className={"card card-section"} key={"root"}>
               <div className="card-body">
                 <Link to={"/menu/root"} onClick={()=>this.setState({section_id:"root"})}>
@@ -72,8 +71,7 @@ class TopMenu extends Component {
 }
 
 const mapStateToProps = ({ menuState }) => {
-  return { sections : menuState.sections,
-    menu : menuState.menu };
+  return menuState;
 };
 
 export default connect(mapStateToProps)(TopMenu);

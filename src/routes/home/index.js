@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { firstLoad } from '../../actions';
+import { loadAll } from '../../actions';
 
 class Home extends Component {
 
   componentDidMount(){
     if(!this.props.mainLoaded)
-      firstLoad(this.props.dispatch);
+      loadAll(this.props.dispatch);
   }
 
   unloadedHome = ()=>{
