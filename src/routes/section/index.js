@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { selectSection  } from '../../actions/actions';
 import { matchPath } from "react-router";
 import TopMenu from '../../components/topMenu';
-import BottomSection from '../../components/bottomSection';
+import BottomSection from '../../components/bottom/bottom';
 import {Image} from 'react-bootstrap';
 
 class Section extends Component {
@@ -47,7 +47,7 @@ class Section extends Component {
                   <div className="image-container">
                     <Image className="section-image" src={"/images/" + i.image.asset._ref}/>
                   </div>
-                  <h6 className="card-title">{i.name.en}</h6>
+                  <h5 className="card-title">{i.name.en}</h5>
                 </div>
               </div>
             </div>

@@ -41,8 +41,12 @@ class Menu extends Component {
                           <div className="image-container">
                             <Image className="section-image" src={"/images/" + m.image.asset._ref}/>
                           </div>
-                          <h6 className="card-title">{m.name.en}</h6>
-                          <IoIosArrowDroprightCircle className="card-go-ico" size="3em" />
+                          <div className="d-flex justify-content-start h-4">
+                            <h5 className="card-title w-50 tx-lf mg04">{m.name.en}</h5>
+                          </div>
+                          <div className="d-flex justify-content-end">
+                            <IoIosArrowDroprightCircle className="card-go-ico" size="3em" />
+                          </div>
                         </Link>
                       </div>
                     </div>

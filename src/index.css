@@ -102,3 +102,29 @@ h6.card-title.selected{
 .no-pd{
   padding: 0 0 0 0;
 }
+
+
+.top-section::-webkit-scrollbar
+{
+    background-color: #F5F5F5;
+    height: 8px;
+}
+
+.top-section::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: #c30000;
+}
+
+.w-50{
+  width: 50%;
+}
+.tx-lf{
+  text-align: left;
+}
+.mg04{
+  margin: 0.4rem;
+}
+.h-4{
+  height: 4rem;
+}
