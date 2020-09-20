@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { configureStore } from './reducers/index.js';
 import Home from './routes/home'
 import Menu from './routes/menu'
-import Section from './routes/section'
+import Section from './routes/section/section'
 
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';//theme burger king

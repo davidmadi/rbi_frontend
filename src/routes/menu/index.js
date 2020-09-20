@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import {Image} from 'react-bootstrap';
 import { matchPath } from "react-router";
 import TopMenu from '../../components/topMenu';
-import BottomSection from '../../components/bottomSection';
+import BottomSection from '../../components/bottom/bottom';
 import { IoIosArrowDroprightCircle } from 'react-icons/io';
 
 
