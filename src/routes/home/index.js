@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { loadAll } from '../../actions';
+import { loadAll } from '../../actions/actions';
 
 class Home extends Component {
 

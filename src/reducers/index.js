@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
 import { combineReducers } from 'redux';
-import menuReducer from './menu'
+import menuReducer from './menuReducer'
 
 const reducers = combineReducers({
     menuState : menuReducer

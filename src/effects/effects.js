@@ -1,4 +1,4 @@
-import { TOP_SECTIONS_UPDATE, MENU_UPDATE, ITEMS_UPDATE, SECTION_ITEMS_UPDATE } from '../actions';
+import { TOP_SECTIONS_UPDATE, MENU_UPDATE, ITEMS_UPDATE, SECTION_ITEMS_UPDATE } from '../actions/actions';
 
 const header = {
   method: 'GET', // *GET, POST, PUT, DELETE, etc.

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 //import { Link } from 'react-router-dom';
-import { selectSection  } from '../../actions';
+import { selectSection  } from '../../actions/actions';
 import { matchPath } from "react-router";
 import TopMenu from '../../components/topMenu';
 import BottomSection from '../../components/bottomSection';

@@ -1,4 +1,5 @@
 import {loadSections, loadMenu, loadItems} from '../effects/effects';
+import {filterItemsForSection} from '../selectors/sectionSelector';
 
 export const TOP_SECTIONS_UPDATE = 'TOP_MENU_UPDATE';
 export const MENU_UPDATE = 'MENU_UPDATE';
@@ -30,25 +31,7 @@ export const selectSection = (dispatch, sectionId, sections, items) => {
     loadSections(dispatch, sections).then((resSections) => {
         loadItems(dispatch, items)
             .then(resItems => {
-                var sectionItems = filterItemsForSection(sectionId, resSections, resItems);
-                dispatch({
-                    type: SECTION_ITEMS_UPDATE,
-                    payload: sectionItems
-                });
+                filterItemsForSection(dispatch, sectionId, resSections, resItems);
             })
     });
-}
-
-export const filterItemsForSection = (sectionId, sections, items) => {
-    var sectionSelected = sections.find(i => i._id === sectionId);
-    if (sectionSelected) {
-        var sectionItems = [];
-        sectionSelected.options.forEach(o => {
-            var sectionItem = items.find(i => i._id === o._ref);
-            if (sectionItem)
-                sectionItems.push(sectionItem);
-        });
-        return sectionItems;
-    }
-    return [];
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { loadAll } from '../../actions';
+import { loadAll } from '../../actions/actions';
 import {Image} from 'react-bootstrap';
 import { matchPath } from "react-router";
 
