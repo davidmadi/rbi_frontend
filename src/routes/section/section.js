@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import { selectSection } from '../../actions/actions';
-import { matchPath } from "react-router";
 import TopMenu from '../../components/topMenu';
 import BottomSection from '../../components/bottom/bottom';
 import { Image } from 'react-bootstrap';
