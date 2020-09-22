@@ -12,7 +12,8 @@ export const filterItemsForSection = (dispatch, sectionId, sections, items) => {
       });
       dispatch({
         type: SECTION_ITEMS_UPDATE,
-        payload: sectionItems
+        payload: sectionItems,
+        selectedSection : sectionId
       });
   }
 

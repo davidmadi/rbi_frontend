@@ -5,6 +5,7 @@ const INITIAL_STATE = {
     menu: [],
     items: [],
     sectionItems: [],
+    selectedSection : null,
     menuResponse: null,
     sectionsResponse: null,
     itemsResponse: null,
@@ -28,7 +29,7 @@ export default (state = INITIAL_STATE, action) => {
             return {...state, items: action.payload };
 
         case SECTION_ITEMS_UPDATE:
-            return {...state, sectionItems: action.payload }
+            return {...state, sectionItems: action.payload, selectedSection:action.selectedSection }
 
         default:
             return {...state };
